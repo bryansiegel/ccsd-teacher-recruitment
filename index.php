@@ -1,3 +1,6 @@
+<?php //TODO: NEED TO COMBINE rssFetch and insert into one file and fix the includes ?>
+
+
 <?php include('includes/head.php'); ?>
 
 <?php include('includes/rssFetch.php'); ?>
@@ -11,7 +14,7 @@
             <table id="recruitmentTable" class="table table-striped table-bordered">
                 <thead>
                 <tr>
-                    <th>Remove?</th>
+                    <th>Active?</th>
                     <th>Title</th>
                     <th>Content</th>
                     <th>Published</th>
@@ -28,9 +31,8 @@
 
                         <?php include('includes/db/insert.php'); ?>
 
-
                         <tr>
-                            <td><input type="checkbox" name="remove"/></td>
+                            <td><input type="checkbox" name="remove" checked/></td>
                             <td><a href='<?php echo $item->link['href']; ?>'><?php echo $item->title; ?></a></td>
                             <td><?php echo $item->content ?></td>
                             <td><?php echo $pubDate ?></td>

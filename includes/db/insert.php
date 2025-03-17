@@ -9,6 +9,7 @@ $db->exec("CREATE TABLE IF NOT EXISTS teacherRecruitment (id INTEGER PRIMARY KEY
 $stmt = $db->prepare("INSERT OR IGNORE INTO teacherRecruitment (title, content, published, link) VALUES (:title, :content, :published, :link)");
 
 //bind params
+/** @var TYPE_NAME $item */
 $stmt->bindParam(':title', $item->title, SQLITE3_TEXT);
 $stmt->bindParam(':content', $item->content, SQLITE3_TEXT);
 $stmt->bindParam(':published', $pubDate, SQLITE3_TEXT);
@@ -16,6 +17,7 @@ $stmt->bindParam(':link', $item->link['href'], SQLITE3_TEXT);
 
 $result = $stmt->execute();
 
+//Check Results
 //                        if ($result) {
 //                            echo "Data inserted successfully.";
 //                        } else {
