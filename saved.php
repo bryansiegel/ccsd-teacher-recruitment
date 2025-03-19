@@ -13,7 +13,7 @@ $db = new SQLite3('teacherRecruitment.db');
                 <table id="savedTable" class="table table-striped table-bordered">
                     <thead>
                     <tr>
-                        <th>Title</th>
+                        <th>Active?</th>
                         <th>Content</th>
                         <th>Published</th>
                     </tr>
