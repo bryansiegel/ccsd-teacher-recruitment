@@ -6,8 +6,6 @@ $db = new SQLite3('teacherRecruitment.db');
 $redirect_url = 'http://localhost/ccsd-teacher-recruitment/';
 
 // Create table if it doesn't exist
-
-// Create table if it doesn't exist
 $db->exec("CREATE TABLE IF NOT EXISTS teacherRecruitment (
     id INTEGER PRIMARY KEY, 
     title TEXT, 
@@ -47,9 +45,6 @@ foreach ($rss_feeds as $rss_feed) {
             // Prepare the insert statement to sqlite
             $stmt = $db->prepare("INSERT OR IGNORE INTO teacherRecruitment (title, content, published, link, active, saved) VALUES (:title, :content, :published, :link, 1,0)");
 
-//            active = 1;
-//            saved = 0;
-
             // Bind parameters
             $stmt->bindParam(':title', $item->title, SQLITE3_TEXT);
             $stmt->bindParam(':content', $item->content, SQLITE3_TEXT);
@@ -65,4 +60,3 @@ foreach ($rss_feeds as $rss_feed) {
         }
     }
 }
-?>

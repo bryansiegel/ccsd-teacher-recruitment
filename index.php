@@ -1,3 +1,6 @@
+<?php //TODO: ADD EXPORT TO EXCEL BUTTON
+//TODO: ADD LOADING ICON FOR SAVE AND ARCHIVE ?>
+
 <?php include('includes/head.php'); ?>
 <?php include('includes/header.php'); ?>
     <div class="container">
@@ -16,7 +19,6 @@
                     <tbody>
                     <?php include('includes/rssFetchDbInsert.php') ?>
                     <?php // Fetch data from the database to display in the table
-                    //@var $db SQLite3 database connection
 
                     /** @var $db */
                     $results = $db->query("SELECT * FROM teacherRecruitment WHERE active = 1");
