@@ -5,9 +5,19 @@
 <script src="https://cdn.datatables.net/2.2.2/js/dataTables.js"></script>
 
 <script>
+    // Initialize DataTable for the recruitment table
     $(document).ready( function () {
         $('#recruitmentTable').DataTable();
     } );
+</script>
+<script>
+    //refresh page every 2 hours
+    $(document).ready(function() {
+        // Set the timeout for 2 hours (2 * 60 * 60 * 1000 milliseconds)
+        setTimeout(function() {
+            location.reload();
+        }, 2 * 60 * 60 * 1000);
+    });
 </script>
 
 </body>
