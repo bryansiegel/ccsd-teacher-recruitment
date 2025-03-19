@@ -1,5 +1,4 @@
 <?php
-// TODO: SEE IF I CAN SPEEDUP. UNIQUE INDEXES? OR JUST INSERT OR IGNORE?
 
 // SQLite3 db connection
 $db = new SQLite3('teacherRecruitment.db');
@@ -8,14 +7,17 @@ $redirect_url = 'http://localhost/ccsd-teacher-recruitment/';
 
 // Create table if it doesn't exist
 
+// Create table if it doesn't exist
 $db->exec("CREATE TABLE IF NOT EXISTS teacherRecruitment (
     id INTEGER PRIMARY KEY, 
-    title TEXT UNIQUE, 
-    content TEXT UNIQUE, 
+    title TEXT, 
+    content TEXT, 
     published TEXT, 
-    link TEXT UNIQUE,
+    link TEXT,
     active BOOLEAN DEFAULT 1, 
-    saved BOOLEAN DEFAULT 0)");
+    saved BOOLEAN DEFAULT 0,
+    UNIQUE(title, content, link)
+)");
 
 $rss_feeds = [
     //teacher layoffs

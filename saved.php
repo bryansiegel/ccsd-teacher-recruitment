@@ -1,7 +1,7 @@
 <?php
 // TODO: ONLY SHOW SAVED AND ACTIVE
 // TODO: ADD ACTIVE COLUMN REFRESH
-
+include('includes/head.php');
 include('includes/header.php');
 
 // SQLite3 db connection
