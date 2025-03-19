@@ -1,4 +1,6 @@
 <?php
+// TODO: SEE IF I CAN SPEEDUP. UNIQUE INDEXES? OR JUST INSERT OR IGNORE?
+
 // SQLite3 db connection
 $db = new SQLite3('teacherRecruitment.db');
 
@@ -6,7 +8,6 @@ $redirect_url = 'http://localhost/ccsd-teacher-recruitment/';
 
 // Create table if it doesn't exist
 
-// TOD0: SEE IF I CAN SPEED THIS UP
 $db->exec("CREATE TABLE IF NOT EXISTS teacherRecruitment (
     id INTEGER PRIMARY KEY, 
     title TEXT UNIQUE, 
