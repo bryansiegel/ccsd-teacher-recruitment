@@ -30,7 +30,8 @@
                             <?php if ($row['saved'] == 1) { ?><td><a href='#' class='btn btn-success saveButton' data-id='<?php echo $row['id']; ?>'>Saved</a></td>
                             <?php } else { ?>
                                 <td><a href='#' class='btn btn-primary saveButton' data-id='<?php echo $row['id']; ?>'>Save</a></td>
-                            <?php } ?>
+                            <?php
+                            } ?>
                         </tr>
                     <?php }
 
