@@ -5,6 +5,8 @@ $db = new SQLite3('teacherRecruitment.db');
 $redirect_url = 'http://localhost/ccsd-teacher-recruitment/';
 
 // Create table if it doesn't exist
+
+// TOD0: SEE IF I CAN SPEED THIS UP
 $db->exec("CREATE TABLE IF NOT EXISTS teacherRecruitment (
     id INTEGER PRIMARY KEY, 
     title TEXT UNIQUE, 
@@ -50,14 +52,14 @@ foreach ($rss_feeds as $rss_feed) {
             $stmt->bindParam(':content', $item->content, SQLITE3_TEXT);
             $stmt->bindParam(':published', $pubDate, SQLITE3_TEXT);
             $stmt->bindParam(':link', $item->link['href'], SQLITE3_TEXT);
+
+            //TODO: LOOK AT THIS CODE
             $stmt->bindParam(':active', $item->link, SQLITE3_INTEGER);
             $stmt->bindParam(':saved', $item->saved, SQLITE3_TEXT);
-
 
             // Execute the statement
             $stmt->execute();
         }
     }
 }
-//header('Location: http://localhost/ccsd-teacher-recruitment/'); // Redirect to the main page after fetching and inserting data
 ?>

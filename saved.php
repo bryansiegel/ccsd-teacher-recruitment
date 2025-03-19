@@ -1,6 +1,7 @@
 <?php
-// Include necessary files
-include('includes/head.php');
+// TODO: ONLY SHOW SAVED AND ACTIVE
+// TODO: ADD ACTIVE COLUMN REFRESH
+
 include('includes/header.php');
 
 // SQLite3 db connection
