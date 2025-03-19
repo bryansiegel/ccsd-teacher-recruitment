@@ -25,14 +25,20 @@
                    <?php // Fetch data from the database to display in the table
                    //@var $db SQLite3 database connection
 
-                   $results = $db->query("SELECT * FROM teacherRecruitment");
+                   $results = $db->query("SELECT * FROM teacherRecruitment WHERE active = 1");
+
                    while ($row = $results->fetchArray(SQLITE3_ASSOC)) { ?>
                         <tr>
-                        <td><input type='checkbox' name='remove' checked/></td>
-                        <td><a href='<?php echo $row['link']; ?>'><?php echo $row['title']; ?></a></td>
+                            <td><input id="active" type='checkbox' name='active' data-id='<?php echo $row['id']; ?>' checked/></td>
+
+                            <td><a href='<?php echo $row['link']; ?>'><?php echo $row['title']; ?></a></td>
                         <td><?php echo $row['content']; ?></td>
                         <td><?php echo $row['published'] ?></td>
-                        <td><a href='' class='btn btn-primary'>Save</a></td>
+                            <?php if($row['saved'] == 1) { ?>
+                                <td><a href='#' class='btn btn-success saveButton' data-id='<?php echo $row['id']; ?>'>Saved</a></td>
+                            <?php } else { ?>
+                            <td><a href='#' class='btn btn-primary saveButton' data-id='<?php echo $row['id']; ?>'>Save</a></td>
+                           <?php } ?>
                         </tr>
 
 
