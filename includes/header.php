@@ -11,7 +11,7 @@
                         <a class="nav-link" aria-current="page" href="/ccsd-teacher-recruitment/">Active</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Today</a>
+                        <a class="nav-link" href="/ccsd-teacher-recruitment/today.php">Today</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link active" href="/ccsd-teacher-recruitment/saved.php">Saved</a>
@@ -23,7 +23,19 @@
                         <a class="nav-link active" aria-current="page" href="/ccsd-teacher-recruitment/">Active</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Today</a>
+                        <a class="nav-link" href="/ccsd-teacher-recruitment/today.php">Today</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/ccsd-teacher-recruitment/saved.php">Saved</a>
+                    </li>
+                </ul>
+            <?php } elseif ($currentUri == '/ccsd-teacher-recruitment/today.php') { ?>
+                <ul class="nav nav-pills">
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="/ccsd-teacher-recruitment/">Active</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="/ccsd-teacher-recruitment/today.php">Today</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="/ccsd-teacher-recruitment/saved.php">Saved</a>
