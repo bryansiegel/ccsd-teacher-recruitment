@@ -14,6 +14,7 @@ $db = new SQLite3('teacherRecruitment.db');
                     <thead>
                     <tr>
                         <th>Active?</th>
+                        <th>Title</th>
                         <th>Content</th>
                         <th>Published</th>
                     </tr>
@@ -21,7 +22,7 @@ $db = new SQLite3('teacherRecruitment.db');
                     <tbody>
                     <?php
                     // Fetch data from the database where saved = 1
-                    $results = $db->query("SELECT * FROM teacherRecruitment WHERE saved = 1 AND active = 1");
+                    $results = $db->query("SELECT * FROM teacherRecruitment WHERE saved = 1 AND active = 1 ORDER BY published DESC");
 
                     while ($row = $results->fetchArray(SQLITE3_ASSOC)) { ?>
                         <tr>
