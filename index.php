@@ -1,5 +1,6 @@
 <?php //TODO: ADD EXPORT TO EXCEL BUTTON
-//TODO: ADD LOADING ICON FOR SAVE AND ARCHIVE ?>
+//TODO: ADD LOADING ICON FOR SAVE AND ARCHIVE
+//TODO: REFACTOR FILES INTO FOLDERS ?>
 
 <?php include('includes/head.php'); ?>
 <?php include('includes/header.php'); ?>
@@ -21,7 +22,7 @@
                     <?php // Fetch data from the database to display in the table
 
                     /** @var $db */
-                    $results = $db->query("SELECT * FROM teacherRecruitment WHERE active = 1");
+                    $results = $db->query("SELECT * FROM teacherRecruitment WHERE active = 1 ORDER BY published DESC");
 
                     while ($row = $results->fetchArray(SQLITE3_ASSOC)) { ?>
                         <tr>
