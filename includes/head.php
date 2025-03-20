@@ -11,4 +11,3 @@
     <link rel="stylesheet" href="https://cdn.datatables.net/2.2.2/css/dataTables.dataTables.css"/>
 </head>
 <body>
-<?php include('includes/helpers/dates.php'); ?>
