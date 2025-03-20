@@ -1,6 +1,3 @@
-<?php //TODO: ADD EXPORT TO EXCEL BUTTON
- ?>
-
 <?php include('includes/head.php'); ?>
 <?php include('includes/header.php'); ?>
     <div class="container">
