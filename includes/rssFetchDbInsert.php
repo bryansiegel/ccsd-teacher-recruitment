@@ -7,12 +7,12 @@ $redirect_url = 'http://localhost/ccsd-teacher-recruitment/';
 
 // Create table if it doesn't exist
 $db->exec("CREATE TABLE IF NOT EXISTS teacherRecruitment (
-    id INTEGER PRIMARY KEY, 
-    title TEXT, 
-    content TEXT, 
-    published TEXT, 
+    id INTEGER PRIMARY KEY,
+    title TEXT,
+    content TEXT,
+    published TEXT,
     link TEXT,
-    active BOOLEAN DEFAULT 1, 
+    active BOOLEAN DEFAULT 1,
     saved BOOLEAN DEFAULT 0,
     UNIQUE(title, content, link)
 )");
@@ -29,6 +29,8 @@ $rss_feeds = [
     //boston teacher layoffs
     "https://www.google.com/alerts/feeds/09799090004667660386/13008520046193247680"
 ];
+
+echo '<script>$("#loadingOverlay").show(); $("#loadingSpinner").show();</script>';
 
 foreach ($rss_feeds as $rss_feed) {
     // Load the RSS feed
@@ -51,12 +53,10 @@ foreach ($rss_feeds as $rss_feed) {
             $stmt->bindParam(':published', $pubDate, SQLITE3_TEXT);
             $stmt->bindParam(':link', $item->link['href'], SQLITE3_TEXT);
 
-            //TODO: LOOK AT THIS CODE
-            $stmt->bindParam(':active', $item->link, SQLITE3_INTEGER);
-            $stmt->bindParam(':saved', $item->saved, SQLITE3_TEXT);
-
             // Execute the statement
             $stmt->execute();
         }
     }
 }
+
+echo '<script>$("#loadingOverlay").hide(); $("#loadingSpinner").hide();</script>';
