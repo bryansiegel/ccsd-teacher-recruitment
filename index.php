@@ -1,6 +1,5 @@
 <?php //TODO: ADD EXPORT TO EXCEL BUTTON
-//TODO: ADD LOADING ICON FOR SAVE AND ARCHIVE
-//TODO: REFACTOR FILES INTO FOLDERS ?>
+ ?>
 
 <?php include('includes/head.php'); ?>
 <?php include('includes/header.php'); ?>
@@ -26,7 +25,7 @@
 
                     while ($row = $results->fetchArray(SQLITE3_ASSOC)) { ?>
                         <tr>
-                            <td><input id="active" type='checkbox' name='active' data-id='<?php echo $row['id']; ?>' checked/></td>
+                            <td><label for="active"></label><input id="active" type='checkbox' name='active' data-id='<?php echo $row['id']; ?>' checked/></td>
                             <td><a href='<?php echo $row['link']; ?>'><?php echo $row['title']; ?></a></td>
                             <td><?php echo $row['content']; ?></td>
                             <td><?php echo $row['published'] ?></td>
