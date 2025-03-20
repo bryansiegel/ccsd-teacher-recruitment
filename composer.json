@@ -1,0 +1,17 @@
+{
+    "name": "darthsr/ccsd-teacher-recruitment",
+    "require": {
+        "phpoffice/phpexcel": "^1.8"
+    },
+    "autoload": {
+        "psr-4": {
+            "Darthsr\\CcsdTeacherRecruitment\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Bryan Siegel",
+            "email": "bryansiegel@gmail.com"
+        }
+    ]
+}

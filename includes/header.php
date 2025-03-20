@@ -17,6 +17,8 @@
                         <a class="nav-link active" href="/ccsd-teacher-recruitment/saved.php">Saved</a>
                     </li>
                 </ul>
+                <a href="exportToExcel.php" class="btn btn-success float-end" style="margin-top: -40px">Export to Excel</a>
+
             <?php } elseif ($currentUri == '/ccsd-teacher-recruitment/') { ?>
                 <ul class="nav nav-pills">
                     <li class="nav-item">
@@ -29,6 +31,8 @@
                         <a class="nav-link" href="/ccsd-teacher-recruitment/saved.php">Saved</a>
                     </li>
                 </ul>
+                <a href="exportToExcel.php" class="btn btn-success float-end" style="margin-top: -40px">Export to Excel</a>
+
             <?php } elseif ($currentUri == '/ccsd-teacher-recruitment/today.php') { ?>
                 <ul class="nav nav-pills">
                     <li class="nav-item">
@@ -41,6 +45,8 @@
                         <a class="nav-link" href="/ccsd-teacher-recruitment/saved.php">Saved</a>
                     </li>
                 </ul>
+                <a href="exportToExcel.php" class="btn btn-success float-end" style="margin-top: -40px">Export to Excel</a>
+
             <?php } ?>
             <hr/>
         </div>
