@@ -1,11 +1,17 @@
 {
     "name": "darthsr/ccsd-teacher-recruitment",
     "require": {
-        "phpoffice/phpspreadsheet": "^4.1"
+        "php": "^7.4",
+        "phpoffice/phpspreadsheet": "^1.23"
     },
     "autoload": {
         "psr-4": {
             "Darthsr\\CcsdTeacherRecruitment\\": "src/"
+        }
+    },
+    "config": {
+        "platform": {
+            "php": "7.4.33"
         }
     },
     "authors": [

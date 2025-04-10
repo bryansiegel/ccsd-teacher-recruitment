@@ -1,7 +1,10 @@
+<?php 
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
+?>
 <?php include('includes/head.php'); ?>
 <?php include('includes/header.php'); ?>
     <div class="container">
-        <?php echo date("now"); ?>
         <div class="row">
             <div class="col">
                 <table id="recruitmentTable" class="table table-striped table-bordered">
