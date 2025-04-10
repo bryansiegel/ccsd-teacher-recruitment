@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="SshConfigs">
+    <configs>
+      <sshConfig host="10.49.51.17" id="dd5b78b3-f363-4adc-9fbd-c2f165f2da87" keyPath="$USER_HOME$/keys/id_rsa" port="22" nameFormat="DESCRIPTIVE" username="wordpress" useOpenSSHConfig="true" />
+    </configs>
+  </component>
+</project>

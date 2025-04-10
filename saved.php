@@ -22,14 +22,16 @@ $db = new SQLite3('teacherRecruitment.db');
                     <tbody>
                     <?php
                     // Fetch data from the database where saved = 1
-                    $results = $db->query("SELECT * FROM teacherRecruitment WHERE saved = 1 AND active = 1 ORDER BY published DESC");
+                    $results = $db->query("SELECT * FROM teacherRecruitment WHERE active = 1 ORDER BY published ASC");
 
-                    while ($row = $results->fetchArray(SQLITE3_ASSOC)) { ?>
+                    while ($row = $results->fetchArray(SQLITE3_ASSOC)) {
+                        $publishedDate = date("F j, Y, g:i a", strtotime($row['published']));
+                        ?>
                         <tr>
                             <td><input id="active" type='checkbox' name='active' data-id='<?php echo $row['id']; ?>' checked/></td>
                             <td><a href='<?php echo $row['link']; ?>'><?php echo $row['title']; ?></a></td>
                             <td><?php echo $row['content']; ?></td>
-                            <td><?php echo $row['published'] ?></td>
+                            <td><?php echo $publishedDate ?></td>
                         </tr>
                     <?php
                     }

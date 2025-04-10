@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="3808d989-fecb-4518-83d7-1d88dfa85120" name="teacher recruitment application">
+        <fileTransfer rootFolder="/home/wordpress/sites/recruitment/teacher-recruitment" accessType="SFTP" host="10.49.51.17" port="22" sshConfigId="dd5b78b3-f363-4adc-9fbd-c2f165f2da87" sshConfig="wordpress@10.49.51.17:22 key" keyPair="true">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" keepAliveTimeout="0" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>
