@@ -23,7 +23,15 @@ $db = new SQLite3('teacherRecruitment.db');
                     <?php
                     // Fetch data from the database where saved = 1
                     $results = $db->query("SELECT * FROM teacherRecruitment WHERE active = 1 ORDER BY published ASC");
-
+//                    $results = $db->query("SELECT * FROM teacherRecruitment WHERE active = 1 ORDER BY published DESC");
+//                    $results = $db->query("
+//    SELECT *
+//    FROM teacherRecruitment
+//    WHERE active = 1
+//    ORDER BY
+//        strftime('%m-%d', published) ASC,
+//        published DESC
+//");
                     while ($row = $results->fetchArray(SQLITE3_ASSOC)) {
                         $publishedDate = date("F j, Y, g:i a", strtotime($row['published']));
                         ?>

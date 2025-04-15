@@ -22,7 +22,15 @@ ini_set('display_errors', 1);
                     <?php // Fetch data from the database to display in the table
 
                     /** @var $db */
-                    $results = $db->query("SELECT * FROM teacherRecruitment WHERE active = 1 ORDER BY published ASC");
+//                    $results = $db->query("SELECT * FROM teacherRecruitment WHERE active = 1 ORDER BY published ASC");
+                    $results = $db->query("
+    SELECT *
+    FROM teacherRecruitment
+    WHERE active = 1
+    ORDER BY
+        strftime('%m-%d', published) ASC,
+        published ASC
+");
 
                     while ($row = $results->fetchArray(SQLITE3_ASSOC)) {
                         $publishedDate = date("F j, Y, g:i a", strtotime($row['published']));
